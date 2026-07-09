@@ -1,0 +1,40 @@
+# Exam Grade Calculator, Adonai Mbuga 1st Python Project
+# Description: This project aims to ask the user for input of their exam scores and will determine the user's grade
+print("Welcome to the Exam Grade Calculator!")
+print("What subject are you doing?")
+subject = input()
+print(f"What is your {subject} exam out of? e.g /100")
+grade = int(input())
+while grade <= 0:
+    print("Please enter a valid grade")
+    valid = int(input())
+    break
+grade = valid
+print(f"Your exam grade is out of {grade}")
+
+#now begin percentages
+print("What was your score on the exam?")
+score = float(input())
+base_score = score/grade * 100
+percent = round(base_score, 2)
+# if statements
+if score > grade:
+    basic_bonus = percent - 100
+    bonus = round(basic_bonus,2)
+    print(f"Wow you scored above the rubric! Your grade is 100% with an additional {bonus}% as your bonus, final grade for {subject} is {percent}%. Your Grade is an A+")
+elif percent >= 90:
+    print(f"Congratulations! Your score for {subject} is {percent}% and your Grade is an A")
+elif percent >= 80:
+    print(f"Congratulations! Your score for {subject} is {percent}% and your Grade is a B")
+elif percent >= 70:
+    print(f"Good job you scored {percent}% for {subject} and your Grade is a C")
+elif percent >= 60:
+    print(f"You scored {percent}% for the {subject} exam and your Grade is a D")
+elif percent >= 0 or percent <= 59:
+    print(f"You scored {percent}% for the {subject} exam and your Grade is an F")
+else:
+    print(f"Unfortunately, your score is out of range for {subject}.")
+
+print("Thank you for using the Exam Grade Calculator")
+
+# this has b
