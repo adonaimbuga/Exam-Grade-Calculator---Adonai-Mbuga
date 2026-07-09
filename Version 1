@@ -36,5 +36,3 @@ else:
     print(f"Unfortunately, your score is out of range for {subject}.")
 
 print("Thank you for using the Exam Grade Calculator")
-
-# this has b
