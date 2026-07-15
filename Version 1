@@ -9,7 +9,7 @@ while grade <= 0:
     print("Please enter a valid grade")
     valid = int(input())
     break
-grade = valid
+grade = abs(grade)
 print(f"Your exam grade is out of {grade}")
 
 #now begin percentages
